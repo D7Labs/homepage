@@ -178,7 +178,7 @@ export default function Home() {
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`${process.env.NODE_ENV === "production" ? "/homepage" : ""}/app-store-badge-en.svg`}
+                      src="/app-store-badge-en.svg"
                       alt="Download on the App Store"
                       className="h-10 transition hover:opacity-80"
                     />
@@ -191,7 +191,7 @@ export default function Home() {
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`${process.env.NODE_ENV === "production" ? "/homepage" : ""}/google-play-badge-en.svg`}
+                      src="/google-play-badge-en.svg"
                       alt="Get it on Google Play"
                       className="h-10 transition hover:opacity-80"
                     />
