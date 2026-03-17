@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
       </body>
+      <GoogleAnalytics gaId="G-FPZ2FD25WV" />
     </html>
   );
 }
