@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "title": "D7 Labs — La technologie au service du Royaume",
+    "description": "D7 Labs développe des outils alimentés par l'IA qui aident les églises à étendre leur impact, approfondir le discipulat et rejoindre leurs communautés.",
+    "ogDescription": "Des outils alimentés par l'IA au service des églises et des communautés de foi à travers le monde."
+  },
+  "nav": {
+    "products": "Produits",
+    "about": "À propos",
+    "getInTouch": "Nous contacter",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Bâtir pour le Royaume",
+    "titlePre": "La technologie au ",
+    "titleHighlight": "service",
+    "titlePost": " de l'Église",
+    "description": "D7 Labs développe des outils alimentés par l'IA qui aident les églises à étendre leur impact, approfondir le discipulat et rejoindre leurs communautés — conçus par un ingénieur avec 18 ans d'expérience en ministère.",
+    "cta": "Planifier une conversation",
+    "secondaryCta": "Voir mes réalisations"
+  },
+  "products": {
+    "sectionLabel": "Ce que je construis",
+    "sectionTitle": "Des outils pour l'Église d'aujourd'hui",
+    "cesperance": {
+      "name": "Chant d'Espérance",
+      "status": "En ligne",
+      "description": "Un recueil de cantiques numérique et lecteur biblique gratuit préservant les collections traditionnelles de cantiques chrétiens pour les communautés haïtiennes et francophones du monde entier. 9 recueils de cantiques, 3 traductions bibliques, interface trilingue.",
+      "tags": ["Cantiques", "Lecteur biblique", "Trilingue", "Gratuit"],
+      "visitLink": "Visiter cesperance.com",
+      "appStoreAlt": "Télécharger sur l'App Store",
+      "googlePlayAlt": "Disponible sur Google Play"
+    },
+    "alpha": {
+      "name": "Alpha",
+      "status": "En développement",
+      "description": "Traitement de sermons par IA qui transforme les enregistrements en contenu structuré de discipulat — prolongeant le sermon au-delà du dimanche dans le reste de la semaine.",
+      "tags": ["IA", "Traitement de sermons", "Programme", "Multilingue"],
+      "visitLink": "Visiter studio.d7labs.dev"
+    }
+  },
+  "about": {
+    "sectionLabel": "Le bâtisseur",
+    "sectionTitle": "La foi rencontre\nl'ingénierie",
+    "bio1": "Je suis Davenson Lombard — un ingénieur logiciel senior avec plus de 12 ans d'expérience dans des entreprises comme MongoDB et Confluent, et 18 ans de service dans le ministère audiovisuel d'église.",
+    "bio2": "J'ai vu de mes propres yeux comment les églises investissent tout dans le sermon du dimanche, mais peinent à prolonger cet impact au cours de la semaine. J'ai observé des responsables de louange feuilleter des recueils de cantiques usés à la recherche du bon chant. La plupart des églises savent que la technologie pourrait aider — il leur manque simplement les bons outils ou l'expertise technique pour y arriver.",
+    "bio3": "D7 Labs existe pour combler cet écart — en développant des outils réfléchis, alimentés par l'IA, qui respectent le sacré tout en embrassant la modernité, façonnés par de vraies conversations avec les personnes qu'ils servent.",
+    "stats": {
+      "enterpriseTech": {
+        "value": "12+",
+        "label": "Ans en technologie d'entreprise",
+        "sub": "MongoDB, Confluent, Ciena"
+      },
+      "churchMinistry": {
+        "value": "18",
+        "label": "Ans en ministère d'église",
+        "sub": "Ingénieur AV à directeur"
+      },
+      "developersReached": {
+        "value": "100K+",
+        "label": "Développeurs rejoints",
+        "sub": "MongoDB"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Langues supportées",
+        "sub": "Anglais, français, créole"
+      }
+    }
+  },
+  "mission": {
+    "quote": "« Tout ce que vous faites, faites-le de bon cœur, comme pour le Seigneur. »",
+    "citation": "Colossiens 3:23"
+  },
+  "contact": {
+    "sectionLabel": "Parlons-en",
+    "sectionTitle": "De quoi votre église a-t-elle besoin ?",
+    "description": "J'échange avec des responsables d'église pour comprendre les vrais défis avant de concevoir des solutions. Que vous soyez pasteur, responsable de louange, responsable technique ou administrateur d'église — j'aimerais entendre votre histoire.",
+    "formTitle": "Contacter D7 Labs",
+    "location": "Basé à Montréal."
+  },
+  "footer": {
+    "copyright": "© {year} D7 Labs. Construit avec intention."
+  }
+}
