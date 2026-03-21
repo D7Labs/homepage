@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import cesperanceLogo from "./images/cesperance-logo.png";
 
 const STORE_LINKS = {
@@ -7,7 +10,30 @@ const STORE_LINKS = {
   appStore: "https://apps.apple.com/us/app/cesperance/id6759078317",
 };
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return <HomeContent />;
+}
+
+function HomeContent() {
+  const t = useTranslations();
+
+  const stats = [
+    { ...jsonStat(t, "about.stats.enterpriseTech") },
+    { ...jsonStat(t, "about.stats.churchMinistry") },
+    { ...jsonStat(t, "about.stats.developersReached") },
+    { ...jsonStat(t, "about.stats.languages") },
+  ];
+
+  const cesperanceTags: string[] = ["products.cesperance.tags.0", "products.cesperance.tags.1", "products.cesperance.tags.2", "products.cesperance.tags.3"].map(k => t(k));
+  const alphaTags: string[] = ["products.alpha.tags.0", "products.alpha.tags.1", "products.alpha.tags.2", "products.alpha.tags.3"].map(k => t(k));
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ============================================================
@@ -23,25 +49,29 @@ export default function Home() {
           </a>
           <div className="hidden items-center gap-8 sm:flex">
             <a href="#products" className="text-sm text-neutral-600 transition hover:text-primary-500">
-              Products
+              {t("nav.products")}
             </a>
             <a href="#about" className="text-sm text-neutral-600 transition hover:text-primary-500">
-              About
+              {t("nav.about")}
             </a>
+            <LanguageSwitcher />
             <a
               href="#contact"
               className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50 transition hover:bg-primary-400"
             >
-              Get in Touch
+              {t("nav.getInTouch")}
             </a>
           </div>
           {/* Mobile menu button */}
-          <a
-            href="#contact"
-            className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50 sm:hidden"
-          >
-            Contact
-          </a>
+          <div className="flex items-center gap-3 sm:hidden">
+            <LanguageSwitcher />
+            <a
+              href="#contact"
+              className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50"
+            >
+              {t("nav.contact")}
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -59,21 +89,19 @@ export default function Home() {
           {/* Tagline pill */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-neutral-300/50 bg-neutral-100/50 px-4 py-1.5 text-sm text-neutral-600 backdrop-blur-sm animate-fade-in">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary-500 animate-pulse-soft" />
-            Building for the Kingdom
+            {t("hero.tagline")}
           </div>
 
           <h1 className="mb-6 font-display text-5xl font-bold tracking-tighter text-neutral-950 sm:text-6xl lg:text-7xl animate-slide-up">
-            Technology that{" "}
+            {t("hero.titlePre")}
             <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">
-              serves
-            </span>{" "}
-            the Church
+              {t("hero.titleHighlight")}
+            </span>
+            {t("hero.titlePost")}
           </h1>
 
           <p className="mx-auto mb-10 max-w-2xl text-lg text-neutral-600 sm:text-xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            D7 Labs builds AI-powered tools that help churches extend their impact,
-            deepen discipleship, and reach their communities — crafted by an engineer
-            with 18 years of ministry experience.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center animate-slide-up" style={{ animationDelay: "0.2s" }}>
@@ -81,7 +109,7 @@ export default function Home() {
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-xl bg-primary-500 px-6 py-3 text-base font-semibold text-neutral-50 shadow-lg transition-all hover:bg-primary-400 hover:shadow-primary-500/20 hover:shadow-xl"
             >
-              Schedule a Conversation
+              {t("hero.cta")}
               <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -90,7 +118,7 @@ export default function Home() {
               href="#products"
               className="inline-flex items-center gap-2 rounded-xl border border-neutral-300 bg-neutral-100/50 px-6 py-3 text-base font-medium text-neutral-800 transition hover:border-neutral-400 hover:bg-neutral-200/50"
             >
-              See My Work
+              {t("hero.secondaryCta")}
             </a>
           </div>
         </div>
@@ -110,10 +138,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
-              What I&apos;m Building
+              {t("products.sectionLabel")}
             </p>
             <h2 className="font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
-              Tools for Today&apos;s Church
+              {t("products.sectionTitle")}
             </h2>
           </div>
 
@@ -134,23 +162,21 @@ export default function Home() {
                   />
                   <div>
                     <h3 className="font-display text-xl font-semibold text-neutral-950">
-                      Chant d&apos;Esp&eacute;rance
+                      {t("products.cesperance.name")}
                     </h3>
                     <span className="inline-flex items-center gap-1 text-xs font-medium text-primary-500">
                       <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
-                      Live
+                      {t("products.cesperance.status")}
                     </span>
                   </div>
                 </div>
 
                 <p className="mb-6 text-neutral-600 leading-relaxed">
-                  A free digital hymnal and Bible reader preserving traditional Christian hymn
-                  collections for Haitian and Francophone communities worldwide. 9 hymn books,
-                  3 Bible translations, trilingual interface.
+                  {t("products.cesperance.description")}
                 </p>
 
                 <div className="mb-6 flex flex-wrap gap-2">
-                  {["Hymnal", "Bible Reader", "Trilingual", "Free"].map((tag) => (
+                  {cesperanceTags.map((tag) => (
                     <span key={tag} className="rounded-full bg-neutral-200/80 px-3 py-1 text-xs font-medium text-neutral-700">
                       {tag}
                     </span>
@@ -163,7 +189,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-500 transition hover:text-primary-400"
                 >
-                  Visit cesperance.com
+                  {t("products.cesperance.visitLink")}
                   <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -174,12 +200,12 @@ export default function Home() {
                     href={STORE_LINKS.appStore}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Download on the App Store"
+                    aria-label={t("products.cesperance.appStoreAlt")}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/app-store-badge-en.svg"
-                      alt="Download on the App Store"
+                      alt={t("products.cesperance.appStoreAlt")}
                       className="h-10 transition hover:opacity-80"
                     />
                   </a>
@@ -187,12 +213,12 @@ export default function Home() {
                     href={STORE_LINKS.googlePlay}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Get it on Google Play"
+                    aria-label={t("products.cesperance.googlePlayAlt")}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/google-play-badge-en.svg"
-                      alt="Get it on Google Play"
+                      alt={t("products.cesperance.googlePlayAlt")}
                       className="h-10 transition hover:opacity-80"
                     />
                   </a>
@@ -213,23 +239,21 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-display text-xl font-semibold text-neutral-950">
-                      Alpha
+                      {t("products.alpha.name")}
                     </h3>
                     <span className="inline-flex items-center gap-1 text-xs font-medium text-secondary-500">
                       <span className="h-1.5 w-1.5 rounded-full bg-secondary-500 animate-pulse-soft" />
-                      In Development
+                      {t("products.alpha.status")}
                     </span>
                   </div>
                 </div>
 
                 <p className="mb-6 text-neutral-600 leading-relaxed">
-                  AI-powered sermon processing that transforms recordings into structured
-                  discipleship content — extending the sermon beyond Sunday into the
-                  rest of the week.
+                  {t("products.alpha.description")}
                 </p>
 
                 <div className="mb-6 flex flex-wrap gap-2">
-                  {["AI-Powered", "Sermon Processing", "Curriculum", "Multilingual"].map((tag) => (
+                  {alphaTags.map((tag) => (
                     <span key={tag} className="rounded-full bg-neutral-200/80 px-3 py-1 text-xs font-medium text-neutral-700">
                       {tag}
                     </span>
@@ -242,7 +266,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary-500 transition hover:text-secondary-400"
                 >
-                  Visit studio.d7labs.dev
+                  {t("products.alpha.visitLink")}
                   <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -266,42 +290,21 @@ export default function Home() {
             {/* Left: Story */}
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
-                The Builder
+                {t("about.sectionLabel")}
               </p>
-              <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
-                Faith meets
-                <br />
-                Engineering
+              <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl whitespace-pre-line">
+                {t("about.sectionTitle")}
               </h2>
               <div className="space-y-4 text-neutral-600 leading-relaxed">
-                <p>
-                  I&apos;m Davenson Lombard — a senior software engineer with 12+ years at
-                  companies like MongoDB and Confluent, and 18 years serving in church
-                  audio-visual ministry.
-                </p>
-                <p>
-                  I&apos;ve seen firsthand how churches pour everything into Sunday&apos;s sermon, yet
-                  struggle to extend that impact through the week. I&apos;ve watched worship leaders
-                  flip through worn paper hymnals searching for the right song. Most churches
-                  know technology could help — they just don&apos;t have the right tools or the
-                  technical expertise to get there.
-                </p>
-                <p>
-                  D7 Labs exists to close that gap — building thoughtful, AI-powered tools
-                  that respect the sacred while embracing the modern, shaped by real
-                  conversations with the people they serve.
-                </p>
+                <p>{t("about.bio1")}</p>
+                <p>{t("about.bio2")}</p>
+                <p>{t("about.bio3")}</p>
               </div>
             </div>
 
             {/* Right: Stats / Credentials */}
             <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: "12+", label: "Years in Enterprise Tech", sub: "MongoDB, Confluent, Ciena" },
-                { value: "18", label: "Years in Church Ministry", sub: "AV Engineer to Director" },
-                { value: "100K+", label: "Developers Reached", sub: "MongoDB" },
-                { value: "3", label: "Languages Supported", sub: "English, French, Creole" },
-              ].map((stat) => (
+              {stats.map((stat) => (
                 <div
                   key={stat.label}
                   className="rounded-xl border border-neutral-200 bg-neutral-100/50 p-6 transition hover:border-neutral-300"
@@ -323,10 +326,10 @@ export default function Home() {
         <div className="mx-auto max-w-4xl">
           <div className="rounded-2xl border border-neutral-200 bg-gradient-to-br from-neutral-100 to-neutral-100/50 p-10 text-center sm:p-14">
             <blockquote className="font-display text-2xl font-medium leading-relaxed tracking-tight text-neutral-900 sm:text-3xl">
-              &ldquo;Whatever you do, work at it with all your heart, as working for the Lord.&rdquo;
+              {t("mission.quote")}
             </blockquote>
             <cite className="mt-4 block text-sm font-medium text-neutral-500">
-              Colossians 3:23
+              {t("mission.citation")}
             </cite>
           </div>
         </div>
@@ -342,23 +345,21 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
-            Let&apos;s Talk
+            {t("contact.sectionLabel")}
           </p>
           <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
-            What does your church need?
+            {t("contact.sectionTitle")}
           </h2>
           <p className="mb-10 text-lg text-neutral-600">
-            I&apos;m having conversations with church leaders to understand real pain points
-            before building solutions. Whether you&apos;re a pastor, worship leader, tech leader,
-            or church administrator — I&apos;d love to hear your story.
+            {t("contact.description")}
           </p>
 
           <div className="mx-auto mt-10 max-w-xl">
-            <TallyEmbed />
+            <TallyEmbed title={t("contact.formTitle")} />
           </div>
 
           <p className="mt-8 text-sm text-neutral-500">
-            Based in Montreal.
+            {t("contact.location")}
           </p>
         </div>
       </section>
@@ -373,7 +374,7 @@ export default function Home() {
             <span className="font-display text-sm font-medium text-neutral-700">D7 Labs</span>
           </div>
           <p className="text-xs text-neutral-500">
-            &copy; {new Date().getFullYear()} D7 Labs. Built with purpose.
+            {t("footer.copyright", { year: new Date().getFullYear() })}
           </p>
         </div>
       </footer>
@@ -382,19 +383,54 @@ export default function Home() {
 }
 
 /* ============================================================
+   Helper to extract stat objects from translations
+   ============================================================ */
+function jsonStat(t: ReturnType<typeof useTranslations>, prefix: string) {
+  return {
+    value: t(`${prefix}.value`),
+    label: t(`${prefix}.label`),
+    sub: t(`${prefix}.sub`),
+  };
+}
+
+/* ============================================================
+   Language Switcher
+   ============================================================ */
+function LanguageSwitcher() {
+  return (
+    <div className="flex items-center gap-1 rounded-lg border border-neutral-200/50 bg-neutral-100/50 p-0.5 text-xs font-medium">
+      <Link
+        href="/"
+        locale="en"
+        className="rounded-md px-2 py-1 text-neutral-600 transition hover:bg-neutral-200/80 hover:text-neutral-950"
+      >
+        EN
+      </Link>
+      <Link
+        href="/"
+        locale="fr"
+        className="rounded-md px-2 py-1 text-neutral-600 transition hover:bg-neutral-200/80 hover:text-neutral-950"
+      >
+        FR
+      </Link>
+    </div>
+  );
+}
+
+/* ============================================================
    Tally Form Embed
    ============================================================ */
-function TallyEmbed() {
+function TallyEmbed({ title }: { title: string }) {
   return (
     <iframe
-      data-tally-src="https://tally.so/embed/obOAaX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      src="https://tally.so/embed/obOAaX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
       loading="lazy"
       width="100%"
       height="1871"
       frameBorder="0"
       marginHeight={0}
       marginWidth={0}
-      title="Contact D7 Labs"
+      title={title}
       style={{ border: "none", background: "transparent", colorScheme: "normal" }}
     />
   );
@@ -402,7 +438,6 @@ function TallyEmbed() {
 
 /* ============================================================
    D7 Labs Logo — Monogram
-   The "D" and "7" merged into a clean mark using the D7 Emerald.
    ============================================================ */
 function D7Logo({ size = 28 }: { size?: number }) {
   return (

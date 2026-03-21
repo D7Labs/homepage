@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "title": "D7 Labs — Technology for the Kingdom",
+    "description": "D7 Labs builds AI-powered tools that help churches extend their impact, deepen discipleship, and reach their communities.",
+    "ogDescription": "AI-powered tools that serve churches and faith communities worldwide."
+  },
+  "nav": {
+    "products": "Products",
+    "about": "About",
+    "getInTouch": "Get in Touch",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Building for the Kingdom",
+    "titlePre": "Technology that ",
+    "titleHighlight": "serves",
+    "titlePost": " the Church",
+    "description": "D7 Labs builds AI-powered tools that help churches extend their impact, deepen discipleship, and reach their communities — crafted by an engineer with 18 years of ministry experience.",
+    "cta": "Schedule a Conversation",
+    "secondaryCta": "See My Work"
+  },
+  "products": {
+    "sectionLabel": "What I'm Building",
+    "sectionTitle": "Tools for Today's Church",
+    "cesperance": {
+      "name": "Chant d'Espérance",
+      "status": "Live",
+      "description": "A free digital hymnal and Bible reader preserving traditional Christian hymn collections for Haitian and Francophone communities worldwide. 9 hymn books, 3 Bible translations, trilingual interface.",
+      "tags": ["Hymnal", "Bible Reader", "Trilingual", "Free"],
+      "visitLink": "Visit cesperance.com",
+      "appStoreAlt": "Download on the App Store",
+      "googlePlayAlt": "Get it on Google Play"
+    },
+    "alpha": {
+      "name": "Alpha",
+      "status": "In Development",
+      "description": "AI-powered sermon processing that transforms recordings into structured discipleship content — extending the sermon beyond Sunday into the rest of the week.",
+      "tags": ["AI-Powered", "Sermon Processing", "Curriculum", "Multilingual"],
+      "visitLink": "Visit studio.d7labs.dev"
+    }
+  },
+  "about": {
+    "sectionLabel": "The Builder",
+    "sectionTitle": "Faith meets\nEngineering",
+    "bio1": "I'm Davenson Lombard — a senior software engineer with 12+ years at companies like MongoDB and Confluent, and 18 years serving in church audio-visual ministry.",
+    "bio2": "I've seen firsthand how churches pour everything into Sunday's sermon, yet struggle to extend that impact through the week. I've watched worship leaders flip through worn paper hymnals searching for the right song. Most churches know technology could help — they just don't have the right tools or the technical expertise to get there.",
+    "bio3": "D7 Labs exists to close that gap — building thoughtful, AI-powered tools that respect the sacred while embracing the modern, shaped by real conversations with the people they serve.",
+    "stats": {
+      "enterpriseTech": {
+        "value": "12+",
+        "label": "Years in Enterprise Tech",
+        "sub": "MongoDB, Confluent, Ciena"
+      },
+      "churchMinistry": {
+        "value": "18",
+        "label": "Years in Church Ministry",
+        "sub": "AV Engineer to Director"
+      },
+      "developersReached": {
+        "value": "100K+",
+        "label": "Developers Reached",
+        "sub": "MongoDB"
+      },
+      "languages": {
+        "value": "3",
+        "label": "Languages Supported",
+        "sub": "English, French, Creole"
+      }
+    }
+  },
+  "mission": {
+    "quote": "\"Whatever you do, work at it with all your heart, as working for the Lord.\"",
+    "citation": "Colossians 3:23"
+  },
+  "contact": {
+    "sectionLabel": "Let's Talk",
+    "sectionTitle": "What does your church need?",
+    "description": "I'm having conversations with church leaders to understand real pain points before building solutions. Whether you're a pastor, worship leader, tech leader, or church administrator — I'd love to hear your story.",
+    "formTitle": "Contact D7 Labs",
+    "location": "Based in Montreal."
+  },
+  "footer": {
+    "copyright": "© {year} D7 Labs. Built with purpose."
+  }
+}
