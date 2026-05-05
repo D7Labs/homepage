@@ -1,0 +1,28 @@
+# D7 Labs
+
+> D7 Labs builds AI-powered tools for churches. Our flagship public tool turns any sermon into a scripture-grounded 3-day devotional PDF for $2.99 per download — no subscription required.
+
+## About
+
+- **Founder**: Davenson Lombard, senior software engineer (12+ years at MongoDB, Confluent, Ciena) and 18 years in church audio-visual ministry.
+- **Based**: Montreal, Canada
+- **Audience**: Pastors, small-group leaders, and church administrators in North America (English and French).
+- **Differentiator**: Pay-per-document pricing ($2.99) instead of $30–$129/mo subscriptions. Strict scripture-grounding — every sentence in a generated devotional must be traceable to the sermon source.
+
+## Tools
+
+- [Sermon to Devotional](https://d7labs.dev/tools/sermon-to-devotional): Paste a YouTube sermon link or upload a PDF transcript. Generates a 3-day devotional PDF in minutes. Each day contains a hook, scripture passage, reflection (4–6 paragraphs), application, and prayer. Free preview, $2.99 to download (PDF or DOCX). Works in English and French.
+
+## Other products
+
+- [Chant d'Espérance](https://cesperance.com): Free hymnal and Bible reader app for Haitian and Francophone churches. Live on iOS and Android.
+- [Ezra Studio](https://ezrastudio.ai): Pre-launch — full sermon-content suite (search, devotionals, discussion guides, more). Waitlist open.
+
+## Pricing
+
+- See [pricing.md](https://d7labs.dev/pricing.md) for machine-readable pricing.
+
+## Contact
+
+- Email: lombard.davenson@gmail.com
+- Website: https://d7labs.dev
