@@ -18,7 +18,10 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://d7labs.dev").replace(/\/$/, "");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "D7 Labs — Technology for the Kingdom",
   description:
     "D7 Labs builds AI-powered tools that help churches extend their impact, deepen discipleship, and reach their communities.",
