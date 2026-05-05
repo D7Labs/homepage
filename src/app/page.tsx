@@ -1,5 +1,7 @@
 import Image from "next/image";
 import cesperanceLogo from "./images/cesperance-logo.png";
+import SiteNav from "./components/SiteNav";
+import SiteFooter from "./components/SiteFooter";
 
 const STORE_LINKS = {
   googlePlay:
@@ -10,40 +12,7 @@ const STORE_LINKS = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* ============================================================
-          Nav
-          ============================================================ */}
-      <nav className="fixed top-0 z-50 w-full border-b border-neutral-200/50 bg-neutral-50/80 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <a href="#" className="flex items-center gap-2.5">
-            <D7Logo />
-            <span className="font-display text-lg font-semibold tracking-tight text-neutral-950">
-              D7 Labs
-            </span>
-          </a>
-          <div className="hidden items-center gap-8 sm:flex">
-            <a href="#products" className="text-sm text-neutral-600 transition hover:text-primary-500">
-              Products
-            </a>
-            <a href="#about" className="text-sm text-neutral-600 transition hover:text-primary-500">
-              About
-            </a>
-            <a
-              href="#contact"
-              className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50 transition hover:bg-primary-400"
-            >
-              Get in Touch
-            </a>
-          </div>
-          {/* Mobile menu button */}
-          <a
-            href="#contact"
-            className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50 sm:hidden"
-          >
-            Contact
-          </a>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* ============================================================
           Hero
@@ -118,7 +87,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {/* Product 1: Chant d'Espérance */}
+            {/* Tool 1: Chant d'Espérance */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
               {/* Glow on hover */}
               <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
@@ -200,7 +169,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Product 2: Ezra Studio */}
+            {/* Tool 2: Ezra Studio */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-secondary-500/30 hover:bg-neutral-100">
               <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-secondary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
 
@@ -243,6 +212,15 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="/tools"
+              className="text-sm font-medium text-primary-500 hover:text-primary-400 transition"
+            >
+              View all tools &rarr;
+            </a>
           </div>
         </div>
       </section>
@@ -357,20 +335,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============================================================
-          Footer
-          ============================================================ */}
-      <footer className="border-t border-neutral-200 px-6 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <D7Logo size={20} />
-            <span className="font-display text-sm font-medium text-neutral-700">D7 Labs</span>
-          </div>
-          <p className="text-xs text-neutral-500">
-            &copy; {new Date().getFullYear()} D7 Labs. Built with purpose.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
@@ -394,32 +359,3 @@ function TallyEmbed() {
   );
 }
 
-/* ============================================================
-   D7 Labs Logo — Monogram
-   The "D" and "7" merged into a clean mark using the D7 Emerald.
-   ============================================================ */
-function D7Logo({ size = 28 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="D7 Labs logo"
-    >
-      <rect width="32" height="32" rx="8" fill="#0ec28a" />
-      <text
-        x="16"
-        y="22"
-        textAnchor="middle"
-        fontFamily="system-ui, sans-serif"
-        fontSize="16"
-        fontWeight="700"
-        fill="#09090B"
-      >
-        D7
-      </text>
-    </svg>
-  );
-}

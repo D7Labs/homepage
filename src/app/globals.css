@@ -62,6 +62,16 @@
   --outline: var(--color-neutral-300);
   --outline-secondary: var(--color-neutral-200);
 
+  /* --- On-color text + semantic colors (used by embedded sermon tool) --- */
+  --on-primary: var(--color-neutral-50);
+  --on-error: var(--color-neutral-950);
+  --color-success-light: #052E16;
+  --color-success: #4ADE80;
+  --color-success-dark: #BBF7D0;
+  --color-error-light: #450A0A;
+  --color-error: #F87171;
+  --color-error-dark: #FECACA;
+
   /* --- Shadows (dark) --- */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
@@ -85,6 +95,19 @@
   --color-surface: var(--surface);
   --color-surface-secondary: var(--surface-secondary);
   --color-surface-tertiary: var(--surface-tertiary);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-secondary: var(--on-surface-secondary);
+  --color-on-surface-tertiary: var(--on-surface-tertiary);
+  --color-outline: var(--outline);
+  --color-outline-secondary: var(--outline-secondary);
+  --color-on-primary: var(--on-primary);
+  --color-on-error: var(--on-error);
+  --color-success: var(--color-success);
+  --color-success-light: var(--color-success-light);
+  --color-success-dark: var(--color-success-dark);
+  --color-error: var(--color-error);
+  --color-error-light: var(--color-error-light);
+  --color-error-dark: var(--color-error-dark);
 
   --color-primary-50: var(--color-primary-50);
   --color-primary-100: var(--color-primary-100);
@@ -260,4 +283,77 @@ h3, h4, h5, h6 { font-weight: 500; }
   body {
     font-size: 15px;
   }
+}
+
+/* ============================================================
+   Sermon Tool Scope — light-themed island inside the dark site.
+   The embedded sermon-to-devotional tool was designed against the
+   D7 Engine creator-studio light theme. We scope its tokens here so
+   the tool keeps its original look while the rest of d7labs.dev
+   stays dark.
+   ============================================================ */
+
+.sermon-tool-scope {
+  color-scheme: light;
+
+  /* Primary: light-mode emerald scale */
+  --color-primary-50: #edfdf7;
+  --color-primary-100: #d2f9ec;
+  --color-primary-200: #9ef0d4;
+  --color-primary-300: #5de3b7;
+  --color-primary-400: #1fd19d;
+  --color-primary-500: #0ec28a;
+  --color-primary-600: #0ba172;
+  --color-primary-700: #097f5a;
+  --color-primary-800: #065e42;
+  --color-primary-900: #04412e;
+  --color-primary-950: #02281c;
+
+  /* Neutral: light-mode zinc */
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F4F4F5;
+  --color-neutral-200: #E4E4E7;
+  --color-neutral-300: #D4D4D8;
+  --color-neutral-400: #A1A1AA;
+  --color-neutral-500: #71717A;
+  --color-neutral-600: #52525B;
+  --color-neutral-700: #3F3F46;
+  --color-neutral-800: #27272A;
+  --color-neutral-900: #18181B;
+  --color-neutral-950: #09090B;
+
+  /* Semantic */
+  --color-success-light: #F0FDF4;
+  --color-success: #22C55E;
+  --color-success-dark: #166534;
+  --color-error-light: #FEF2F2;
+  --color-error: #EF4444;
+  --color-error-dark: #991B1B;
+
+  /* On-color text */
+  --on-primary: #FFFFFF;
+  --on-error: #FFFFFF;
+
+  /* Surface & text aliases */
+  --background: #FFFFFF;
+  --foreground: var(--color-neutral-900);
+  --surface: #FFFFFF;
+  --surface-secondary: var(--color-neutral-100);
+  --surface-tertiary: var(--color-neutral-200);
+  --on-surface: var(--color-neutral-900);
+  --on-surface-secondary: var(--color-neutral-600);
+  --on-surface-tertiary: var(--color-neutral-600);
+  --outline: var(--color-neutral-300);
+  --outline-secondary: var(--color-neutral-200);
+
+  /* Force light surface inside the scope */
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* The scope contains a light card; reset min-height on its main element
+   so the tool fills the card without forcing a 100vh layout */
+.sermon-tool-scope main,
+.sermon-tool-scope > main {
+  min-height: 0;
 }
