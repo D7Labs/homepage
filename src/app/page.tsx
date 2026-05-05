@@ -86,7 +86,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* Tool 1: Chant d'Espérance */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
               {/* Glow on hover */}
@@ -169,7 +169,49 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Tool 2: Ezra Studio */}
+            {/* Tool 2: Sermon to Devotional */}
+            <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
+              <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
+
+              <div className="relative">
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <h3 className="font-display text-2xl font-bold tracking-tight">
+                    <span className="text-neutral-950">Sermon to</span>{" "}
+                    <span className="text-primary-500">Devotional</span>
+                  </h3>
+                  <span className="mt-1.5 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-primary-500">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
+                    Live
+                  </span>
+                </div>
+
+                <p className="mb-6 text-neutral-600 leading-relaxed">
+                  Paste a YouTube sermon link or upload a PDF transcript. Get a scripture-grounded
+                  3-day devotional PDF in minutes. No account, no subscription — just $2.99 per
+                  devotional.
+                </p>
+
+                <div className="mb-6 flex flex-wrap gap-2">
+                  {["YouTube", "PDF", "EN + FR", "$2.99"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-neutral-200/80 px-3 py-1 text-xs font-medium text-neutral-700"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href="/tools/sermon-to-devotional"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-500 transition hover:text-primary-400"
+                >
+                  Try it free &rarr;
+                </a>
+              </div>
+            </div>
+
+            {/* Tool 3: Ezra Studio */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-secondary-500/30 hover:bg-neutral-100">
               <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-secondary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
 

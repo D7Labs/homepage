@@ -11,21 +11,98 @@ import { SermonApp } from "@/components/SermonApp";
 // In-page anchor for "Try it" CTAs that scroll to the embedded tool
 const TOOL_ANCHOR = "#try-it";
 
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://d7labs.dev").replace(/\/$/, "");
+const PAGE_PATH = "/tools/sermon-to-devotional";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const TITLE = "Sermon to Devotional — Turn Any Sermon Into a 3-Day Series | D7 Labs";
+const DESCRIPTION =
+  "Paste a YouTube sermon link or upload a PDF transcript. Get a scripture-grounded 3-day devotional PDF in minutes. $2.99 per devotional.";
+
 export const metadata: Metadata = {
-  title: "Sermon to Devotional — Turn Any Sermon Into a 3-Day Series | D7 Labs",
-  description:
-    "Paste a YouTube sermon link or upload a PDF transcript. Get a scripture-grounded 3-day devotional PDF in minutes. $2.99 per devotional.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: "Sermon to Devotional — D7 Labs",
     description:
       "Turn any sermon into a 3-day devotional PDF. Scripture-grounded, formatted, ready to share.",
     type: "website",
+    url: PAGE_URL,
+    siteName: "D7 Labs",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sermon to Devotional — D7 Labs",
+    description: "Turn any sermon into a 3-day devotional PDF. Scripture-grounded, formatted.",
+  },
+};
+
+// FAQ pairs mirror the on-page FAQ section verbatim. Keep these in sync.
+const FAQ_ITEMS: Array<{ q: string; a: string }> = [
+  {
+    q: "What languages are supported?",
+    a: "English and French. The devotional is written in the same language as the sermon source — if the sermon is in French, the devotional is in French.",
+  },
+  {
+    q: "Does it work without a YouTube link?",
+    a: "Yes. Upload a PDF transcript directly. YouTube and PDF are the two supported sources.",
+  },
+  {
+    q: "Will it say things the pastor didn't say?",
+    a: "No. The model is instructed that every theological claim must be traceable to a moment in the sermon. It cannot invent theology or extend beyond what was said. If you see something that isn't grounded in the source, that's a bug — email us.",
+  },
+  {
+    q: "How long does it take?",
+    a: "30 seconds to 3 minutes depending on sermon length. YouTube sermons take slightly longer since the model watches the full video.",
+  },
+];
+
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${PAGE_URL}#software`,
+      name: "Sermon to Devotional",
+      description: DESCRIPTION,
+      url: PAGE_URL,
+      applicationCategory: "ReligiousApplication",
+      operatingSystem: "Web",
+      offers: {
+        "@type": "Offer",
+        price: "2.99",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      },
+      provider: { "@type": "Organization", name: "D7 Labs", url: SITE_URL },
+      inLanguage: ["en", "fr"],
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "D7 Labs", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools` },
+        { "@type": "ListItem", position: 3, name: "Sermon to Devotional", item: PAGE_URL },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: FAQ_ITEMS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
 };
 
 export default function SermonToDevotionalPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
       <SiteNav />
 
       {/* ============================================================

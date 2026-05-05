@@ -1,0 +1,45 @@
+# DigitalOcean App Platform spec for d7labs.dev
+# Create:  doctl apps create --spec .do/app.yaml
+# Update:  doctl apps update <app-id> --spec .do/app.yaml
+#
+# Secrets (GOOGLE_API_KEY, STRIPE_SECRET_KEY, DO_SPACES_*) are not committed.
+# Add them in the DO web console after creation, or via:
+#   doctl apps update <id> --spec <(envsubst < .do/app.yaml)
+# with the values exported in your shell.
+
+name: d7labs-homepage
+region: tor
+
+services:
+  - name: web
+    github:
+      repo: D7Labs/homepage
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    instance_size_slug: basic-xs
+    instance_count: 1
+    http_port: 8080
+    build_command: npm ci && npm run build
+    run_command: PORT=8080 npm start
+
+    envs:
+      # APP_URL is a DO-managed substitution that resolves to the primary
+      # domain at runtime (DO subdomain initially, custom domain once attached).
+      - key: APP_BASE_URL
+        scope: RUN_AND_BUILD_TIME
+        value: ${APP_URL}
+      - key: NEXT_PUBLIC_SITE_URL
+        scope: RUN_AND_BUILD_TIME
+        value: ${APP_URL}
+
+      # ---- Required secrets — set in DO console after create ----
+      # - key: GOOGLE_API_KEY        type: SECRET
+      # - key: STRIPE_SECRET_KEY     type: SECRET
+
+      # ---- Optional Spaces archive — set in DO console if/when enabled ----
+      # - key: DO_SPACES_KEY         type: SECRET
+      # - key: DO_SPACES_SECRET      type: SECRET
+      # - key: DO_SPACES_BUCKET      value: d7labs-sermon-archive
+      # - key: DO_SPACES_REGION      value: tor1
+      # - key: DO_SPACES_ENDPOINT    value: https://tor1.digitaloceanspaces.com
