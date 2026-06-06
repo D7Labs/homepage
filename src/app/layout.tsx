@@ -22,22 +22,23 @@ const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://d7labs.dev").repl
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "D7 Labs — Technology for the Kingdom",
+  title: "D7 Labs — Independent product studio",
   description:
-    "D7 Labs builds AI-powered tools that help churches extend their impact, deepen discipleship, and reach their communities.",
+    "D7 Labs is an independent studio that designs, builds, and ships its own AI-powered software products.",
   keywords: [
     "D7 Labs",
-    "church technology",
-    "AI for churches",
-    "faith tech",
+    "product studio",
+    "AI products",
+    "software studio",
+    "app development",
     "Davenson Lombard",
     "Chant d'Espérance",
-    "church software",
+    "Ezra Studio",
   ],
   openGraph: {
-    title: "D7 Labs — Technology for the Kingdom",
+    title: "D7 Labs — Independent product studio",
     description:
-      "AI-powered tools that serve churches and faith communities worldwide.",
+      "An independent studio that designs, builds, and ships its own AI-powered software products.",
     type: "website",
   },
 };

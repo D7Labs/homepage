@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 // Routes that need a different image (e.g. the sermon-to-devotional landing
 // page) ship their own opengraph-image.tsx.
 
-export const alt = "D7 Labs — AI-powered tools for churches";
+export const alt = "D7 Labs — Independent product studio";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -73,10 +73,10 @@ export default async function Image() {
               flexDirection: "column",
             }}
           >
-            <div style={{ display: "flex" }}>Technology that</div>
+            <div style={{ display: "flex" }}>We build</div>
             <div style={{ display: "flex", gap: "0.28em" }}>
-              <span style={{ color: "#0EC28A" }}>serves</span>
-              <span>the Church.</span>
+              <span style={{ color: "#0EC28A" }}>AI-powered</span>
+              <span>products.</span>
             </div>
           </div>
           <div
@@ -89,8 +89,7 @@ export default async function Image() {
               letterSpacing: "-0.01em",
             }}
           >
-            AI-powered tools that help churches extend their impact, deepen discipleship, and reach
-            their communities.
+            An independent studio that designs, builds, and ships its own software products.
           </div>
         </div>
 
@@ -105,7 +104,7 @@ export default async function Image() {
           }}
         >
           <div style={{ fontSize: 22, fontWeight: 700, color: "#D4D4D8" }}>
-            Ezra Studio · Sermon to Devotional · Chant d&apos;Espérance
+            Ezra Studio · Chant d&apos;Espérance
           </div>
           <div style={{ fontSize: 22, fontWeight: 700, color: "#71717A" }}>d7labs.dev</div>
         </div>
