@@ -170,8 +170,8 @@ export default function Home() {
             </div>
 
             {/* Tool 2: Ezra Studio */}
-            <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-secondary-500/30 hover:bg-neutral-100">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-secondary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
+            <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
+              <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
 
               <div className="relative">
                 <div className="mb-5 flex items-start justify-between gap-4">
@@ -179,9 +179,9 @@ export default function Home() {
                     <span className="text-neutral-950">Ezra</span>{" "}
                     <span className="text-primary-500">Studio</span>
                   </h3>
-                  <span className="mt-1.5 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-secondary-500">
-                    <span className="h-1.5 w-1.5 rounded-full bg-secondary-500 animate-pulse-soft" />
-                    Waitlist Open
+                  <span className="mt-1.5 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-primary-500">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
+                    Live
                   </span>
                 </div>
 
@@ -192,7 +192,7 @@ export default function Home() {
                 </p>
 
                 <div className="mb-6 flex flex-wrap gap-2">
-                  {["AI-Powered", "Sermon Search", "Content Generation", "Pre-launch"].map((tag) => (
+                  {["AI-Powered", "Sermon Search", "Content Generation"].map((tag) => (
                     <span key={tag} className="rounded-full bg-neutral-200/80 px-3 py-1 text-xs font-medium text-neutral-700">
                       {tag}
                     </span>
@@ -203,9 +203,9 @@ export default function Home() {
                   href="https://ezrastudio.ai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary-500 transition hover:text-secondary-400"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-500 transition hover:text-primary-400"
                 >
-                  Join the waitlist at ezrastudio.ai
+                  Visit ezrastudio.ai
                   <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>

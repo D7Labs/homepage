@@ -1,8 +1,6 @@
 import { ImageResponse } from "next/og";
 
-// Default OG image for any route under / that doesn't define its own.
-// Routes that need a different image (e.g. the sermon-to-devotional landing
-// page) ship their own opengraph-image.tsx.
+// Default OG image for the site.
 
 export const alt = "D7 Labs — Independent product studio";
 export const size = { width: 1200, height: 630 };
