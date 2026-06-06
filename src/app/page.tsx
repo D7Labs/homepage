@@ -28,21 +28,21 @@ export default function Home() {
           {/* Tagline pill */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-neutral-300/50 bg-neutral-100/50 px-4 py-1.5 text-sm text-neutral-600 backdrop-blur-sm animate-fade-in">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary-500 animate-pulse-soft" />
-            Building for the Kingdom
+            Independent product studio
           </div>
 
           <h1 className="mb-6 font-display text-5xl font-bold tracking-tighter text-neutral-950 sm:text-6xl lg:text-7xl animate-slide-up">
-            Technology that{" "}
+            We build{" "}
             <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">
-              serves
+              AI-powered
             </span>{" "}
-            the Church
+            products people actually use
           </h1>
 
           <p className="mx-auto mb-10 max-w-2xl text-lg text-neutral-600 sm:text-xl animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            D7 Labs builds AI-powered tools that help churches extend their impact,
-            deepen discipleship, and reach their communities — crafted by an engineer
-            with 18 years of ministry experience.
+            D7 Labs is an independent studio that designs, builds, and ships its own
+            software — practical products made to solve real problems. Here&apos;s what
+            we&apos;ve built so far.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center animate-slide-up" style={{ animationDelay: "0.2s" }}>
@@ -50,7 +50,7 @@ export default function Home() {
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-xl bg-primary-500 px-6 py-3 text-base font-semibold text-neutral-50 shadow-lg transition-all hover:bg-primary-400 hover:shadow-primary-500/20 hover:shadow-xl"
             >
-              Schedule a Conversation
+              Start a conversation
               <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -59,7 +59,7 @@ export default function Home() {
               href="#products"
               className="inline-flex items-center gap-2 rounded-xl border border-neutral-300 bg-neutral-100/50 px-6 py-3 text-base font-medium text-neutral-800 transition hover:border-neutral-400 hover:bg-neutral-200/50"
             >
-              See My Work
+              See our work
             </a>
           </div>
         </div>
@@ -79,14 +79,14 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
-              What I&apos;m Building
+              Our Work
             </p>
             <h2 className="font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
-              Tools for Today&apos;s Church
+              Projects
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
             {/* Tool 1: Chant d'Espérance */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
               {/* Glow on hover */}
@@ -169,49 +169,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Tool 2: Sermon to Devotional */}
-            <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
-
-              <div className="relative">
-                <div className="mb-5 flex items-start justify-between gap-4">
-                  <h3 className="font-display text-2xl font-bold tracking-tight">
-                    <span className="text-neutral-950">Sermon to</span>{" "}
-                    <span className="text-primary-500">Devotional</span>
-                  </h3>
-                  <span className="mt-1.5 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-primary-500">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
-                    Live
-                  </span>
-                </div>
-
-                <p className="mb-6 text-neutral-600 leading-relaxed">
-                  Paste a YouTube sermon link or upload a PDF transcript. Get a scripture-grounded
-                  3-day devotional PDF in minutes. No account, no subscription — just $2.99 per
-                  devotional.
-                </p>
-
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {["YouTube", "PDF", "EN + FR", "$2.99"].map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-neutral-200/80 px-3 py-1 text-xs font-medium text-neutral-700"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href="/tools/sermon-to-devotional"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-500 transition hover:text-primary-400"
-                >
-                  Try it free &rarr;
-                </a>
-              </div>
-            </div>
-
-            {/* Tool 3: Ezra Studio */}
+            {/* Tool 2: Ezra Studio */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-secondary-500/30 hover:bg-neutral-100">
               <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-secondary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
 
@@ -255,94 +213,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className="mt-10 text-center">
-            <a
-              href="/tools"
-              className="text-sm font-medium text-primary-500 hover:text-primary-400 transition"
-            >
-              View all tools &rarr;
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          About / Founder
-          ============================================================ */}
-      <section id="about" className="relative px-6 py-28">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-primary-500/5 blur-[120px]" />
-        </div>
-
-        <div className="relative mx-auto max-w-6xl">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            {/* Left: Story */}
-            <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
-                The Builder
-              </p>
-              <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
-                Faith meets
-                <br />
-                Engineering
-              </h2>
-              <div className="space-y-4 text-neutral-600 leading-relaxed">
-                <p>
-                  I&apos;m Davenson Lombard — a senior software engineer with 12+ years at
-                  companies like MongoDB and Confluent, and 18 years serving in church
-                  audio-visual ministry.
-                </p>
-                <p>
-                  I&apos;ve seen firsthand how churches pour everything into Sunday&apos;s sermon, yet
-                  struggle to extend that impact through the week. I&apos;ve watched worship leaders
-                  flip through worn paper hymnals searching for the right song. Most churches
-                  know technology could help — they just don&apos;t have the right tools or the
-                  technical expertise to get there.
-                </p>
-                <p>
-                  D7 Labs exists to close that gap — building thoughtful, AI-powered tools
-                  that respect the sacred while embracing the modern, shaped by real
-                  conversations with the people they serve.
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Stats / Credentials */}
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: "12+", label: "Years in Enterprise Tech", sub: "MongoDB, Confluent, Ciena" },
-                { value: "18", label: "Years in Church Ministry", sub: "AV Engineer to Director" },
-                { value: "100K+", label: "Developers Reached", sub: "MongoDB" },
-                { value: "3", label: "Languages Supported", sub: "English, French, Creole" },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-xl border border-neutral-200 bg-neutral-100/50 p-6 transition hover:border-neutral-300"
-                >
-                  <p className="font-display text-3xl font-bold text-primary-500">{stat.value}</p>
-                  <p className="mt-1 text-sm font-medium text-neutral-800">{stat.label}</p>
-                  <p className="mt-0.5 text-xs text-neutral-500">{stat.sub}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          Mission Statement
-          ============================================================ */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl">
-          <div className="rounded-2xl border border-neutral-200 bg-gradient-to-br from-neutral-100 to-neutral-100/50 p-10 text-center sm:p-14">
-            <blockquote className="font-display text-2xl font-medium leading-relaxed tracking-tight text-neutral-900 sm:text-3xl">
-              &ldquo;Whatever you do, work at it with all your heart, as working for the Lord.&rdquo;
-            </blockquote>
-            <cite className="mt-4 block text-sm font-medium text-neutral-500">
-              Colossians 3:23
-            </cite>
-          </div>
         </div>
       </section>
 
@@ -359,12 +229,11 @@ export default function Home() {
             Let&apos;s Talk
           </p>
           <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
-            What does your church need?
+            Have something in mind?
           </h2>
           <p className="mb-10 text-lg text-neutral-600">
-            I&apos;m having conversations with church leaders to understand real pain points
-            before building solutions. Whether you&apos;re a pastor, worship leader, tech leader,
-            or church administrator — I&apos;d love to hear your story.
+            Whether you have a product idea, a problem worth solving, or just want to see
+            what we&apos;re working on next — we&apos;d love to hear from you.
           </p>
 
           <div className="mx-auto mt-10 max-w-xl">

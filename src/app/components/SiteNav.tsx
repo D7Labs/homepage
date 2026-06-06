@@ -41,16 +41,10 @@ export default function SiteNav() {
         </a>
         <div className="hidden items-center gap-8 sm:flex">
           <a
-            href="/tools"
+            href="/#products"
             className="text-sm text-neutral-600 transition hover:text-primary-500"
           >
-            Tools
-          </a>
-          <a
-            href="/#about"
-            className="text-sm text-neutral-600 transition hover:text-primary-500"
-          >
-            About
+            Projects
           </a>
           <a
             href="/#contact"
