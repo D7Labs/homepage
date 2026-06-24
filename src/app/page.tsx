@@ -86,7 +86,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-2xl gap-6">
             {/* Tool 1: Chant d'Espérance */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
               {/* Glow on hover */}
@@ -166,50 +166,6 @@ export default function Home() {
                     />
                   </a>
                 </div>
-              </div>
-            </div>
-
-            {/* Tool 2: Ezra Studio */}
-            <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-secondary-500/30 hover:bg-neutral-100">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-secondary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
-
-              <div className="relative">
-                <div className="mb-5 flex items-start justify-between gap-4">
-                  <h3 className="font-display text-2xl font-bold tracking-tight">
-                    <span className="text-neutral-950">Ezra</span>{" "}
-                    <span className="text-primary-500">Studio</span>
-                  </h3>
-                  <span className="mt-1.5 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-secondary-500">
-                    <span className="h-1.5 w-1.5 rounded-full bg-secondary-500 animate-pulse-soft" />
-                    Waitlist Open
-                  </span>
-                </div>
-
-                <p className="mb-6 text-neutral-600 leading-relaxed">
-                  Your sermon, multiplied. Ezra Studio turns each Sunday sermon into a
-                  searchable library and a week of ready-to-use ministry content —
-                  devotionals, discussion guides, and more — in under 10 minutes.
-                </p>
-
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {["AI-Powered", "Sermon Search", "Content Generation", "Pre-launch"].map((tag) => (
-                    <span key={tag} className="rounded-full bg-neutral-200/80 px-3 py-1 text-xs font-medium text-neutral-700">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href="https://ezrastudio.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary-500 transition hover:text-secondary-400"
-                >
-                  Join the waitlist at ezrastudio.ai
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>

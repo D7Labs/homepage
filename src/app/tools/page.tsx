@@ -46,7 +46,7 @@ export default function ToolsPage() {
           ============================================================ */}
       <section className="px-6 pb-32">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid max-w-2xl gap-6">
 
             {/* Card 1 — Sermon to Devotional (Live) */}
             <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-primary-500/30 hover:bg-neutral-100">
@@ -95,51 +95,6 @@ export default function ToolsPage() {
                     Try it free &rarr;
                   </a>
                 </div>
-              </div>
-            </div>
-
-            {/* Card 2 — More tools coming */}
-            <div className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8 transition-all hover:border-secondary-500/30 hover:bg-neutral-100">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-secondary-500/5 opacity-0 blur-[60px] transition-opacity group-hover:opacity-100" />
-
-              <div className="relative">
-                {/* Status badge */}
-                <div className="mb-5">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-500/10 px-3 py-1 text-xs font-semibold text-secondary-500">
-                    <span className="h-1.5 w-1.5 animate-pulse-soft rounded-full bg-secondary-500" />
-                    Coming soon
-                  </span>
-                </div>
-
-                <h2 className="mb-3 font-display text-2xl font-bold tracking-tight text-neutral-950">
-                  More tools on the way
-                </h2>
-                <p className="mb-8 leading-relaxed text-neutral-600">
-                  Ezra Studio is bringing sermon search, discussion guides, quiz generation, and
-                  more. Join the waitlist to get early access.
-                </p>
-
-                <a
-                  href="https://ezrastudio.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary-500 transition hover:text-secondary-400"
-                >
-                  Join the waitlist
-                  <svg
-                    className="h-3.5 w-3.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>

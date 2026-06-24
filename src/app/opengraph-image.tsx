@@ -104,7 +104,7 @@ export default async function Image() {
           }}
         >
           <div style={{ fontSize: 22, fontWeight: 700, color: "#D4D4D8" }}>
-            Ezra Studio · Chant d&apos;Espérance
+            Chant d&apos;Espérance
           </div>
           <div style={{ fontSize: 22, fontWeight: 700, color: "#71717A" }}>d7labs.dev</div>
         </div>
