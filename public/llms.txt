@@ -1,39 +1,54 @@
 # D7 Labs
 
-> D7 Labs builds AI-powered tools for churches. Our flagship product is Ezra Studio — a full sermon-content suite that turns each Sunday sermon into a searchable library and a week of ready-to-use ministry content. Sermon to Devotional is our first publicly-available capability: a $2.99 pay-per-document tool that anyone can use today without an account.
+> D7 Labs is an independent product studio in Montreal that designs, builds, and ships its own software for learning, faith, and everyday AI. Live products: Ezra (AI learning assistant, iOS and Android), Jack AI (offline on-device AI assistant, iPhone and iPad), Chant d'Espérance (hymnal and Bible reader, iOS and Android), and Sermon to Devotional (a $2.99 pay-per-document web tool).
 
 ## About
 
 - **Site**: https://d7labs.dev
+- **Legal name**: Laboratoires D7 Inc.
+- **Team**: https://d7labs.dev/#team
 - **Founder**: Davenson Lombard, senior software engineer (12+ years at MongoDB, Confluent, Ciena) and 18 years in church audio-visual ministry.
 - **Based**: Montreal, Canada
-- **Audience**: Pastors, small-group leaders, and church administrators in North America (English and French).
-- **Differentiator**: Strict scripture-grounding — every sentence in generated content must be traceable to the sermon source. Pay-per-document pricing on the public tool ($2.99) instead of $30–$129/mo subscriptions.
+- **Languages**: English and French across products; Chant d'Espérance also supports Haitian Creole.
 
 ## Products
 
-### Ezra Studio (flagship — pre-launch)
+### Ezra (live)
 
-Full sermon-content suite for churches. One sermon in → searchable library + a week of ministry content out: devotionals, discussion guides, social clips, study plans, and more. Built around three layers: Process (audio/video → transcripts and analysis), Search (semantic + keyword discovery across all sermons), and Converse (RAG chat scoped to a sermon, a church's library, or the platform).
+Personal learning assistant for students and lifelong learners. Record or import lectures, sermons, classes, YouTube videos, audio, and PDFs. Ezra transcribes them, writes a summary and key ideas for each source, answers questions from your own material with source citations, and creates quizzes, flashcards, and study guides. Includes Scripture references and devotionals for sermon notes. One person's private library, not a team platform.
 
-- **Status**: Pre-launch, waitlist open
+- **Status**: Live on iPhone, iPad, and Android
+- **Pricing**: Free, with optional Ezra Plus subscription
+- **Languages**: English, French
 - **URL**: https://ezrastudio.ai
+- **App Store**: https://apps.apple.com/app/id6798003898
+- **Google Play**: https://play.google.com/store/apps/details?id=dev.d7labs.ezra
 
-### Sermon to Devotional (public — live)
+### Jack AI (live)
 
-The first Ezra Studio capability available to the public. Paste a YouTube sermon link or upload a PDF transcript. In minutes, get a scripture-grounded 3-day devotional PDF. Each day contains a hook, scripture passage, reflection (4–6 paragraphs), application, and prayer. Available in English and French.
+Private, on-device AI assistant that works offline. Chat, live speech translation, transcription of recordings, text extraction from photos and PDFs, and QR code generation. Once models are installed, prompts, audio, and photos are processed on the device without an internet connection.
 
-- **Status**: Live
-- **Pricing**: Free preview (watermarked), $2.99 to download (PDF or DOCX)
-- **No account, no subscription**
-- **URL**: https://d7labs.dev/tools/sermon-to-devotional
+- **Status**: Live on iPhone and iPad
+- **Pricing**: Free
+- **URL**: https://jackai.d7labs.dev
 
-### Chant d'Espérance (live, separate product)
+### Chant d'Espérance (live)
 
 Free hymnal and Bible reader app for Haitian and Francophone churches. 9 hymn books, 3 Bible translations, trilingual interface (French, English, Haitian Creole).
 
 - **Status**: Live on iOS and Android
+- **Pricing**: Free
 - **URL**: https://cesperance.com
+
+### Sermon to Devotional (live)
+
+Web tool for pastors and small-group leaders. Paste a YouTube sermon link or upload a PDF transcript. In minutes, get a scripture-grounded 3-day devotional PDF. Each day contains a hook, scripture passage, reflection (4–6 paragraphs), application, and prayer. Strict scripture-grounding: every sentence must be traceable to the sermon source.
+
+- **Status**: Live
+- **Pricing**: Free preview (watermarked), $2.99 to download (PDF or DOCX)
+- **No account, no subscription**
+- **Languages**: English, French
+- **URL**: https://d7labs.dev/tools/sermon-to-devotional
 
 ## Pricing
 
@@ -41,5 +56,5 @@ Free hymnal and Bible reader app for Haitian and Francophone churches. 9 hymn bo
 
 ## Contact
 
-- Email: lombard.davenson@gmail.com
+- Email: info@d7labs.dev
 - Website: https://d7labs.dev

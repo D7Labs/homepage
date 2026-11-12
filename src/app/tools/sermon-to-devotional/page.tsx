@@ -151,7 +151,7 @@ export default function SermonToDevotionalPage() {
               <div className="mb-8 flex flex-wrap items-center gap-4">
                 <a
                   href={TOOL_ANCHOR}
-                  className="group inline-flex items-center gap-2 rounded-xl bg-primary-500 px-6 py-3 text-base font-semibold text-neutral-50 shadow-lg transition-all hover:bg-primary-400 hover:shadow-primary-500/20 hover:shadow-xl"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-primary-500 px-6 py-3 text-base font-semibold text-white shadow-lg transition-all hover:bg-primary-600 hover:shadow-primary-500/40 hover:shadow-xl"
                 >
                   Try it now
                   <svg
@@ -209,7 +209,7 @@ export default function SermonToDevotionalPage() {
 
                 <div className="relative">
                   {/* Day label */}
-                  <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary-500">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary-700">
                     Day 1
                   </p>
 
@@ -246,7 +246,7 @@ export default function SermonToDevotionalPage() {
                   {/* Today's action */}
                   <div className="mb-4 flex items-start gap-2.5">
                     <svg
-                      className="mt-0.5 h-4 w-4 shrink-0 text-primary-500"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-primary-700"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -297,7 +297,7 @@ export default function SermonToDevotionalPage() {
       <section id="how-it-works" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-700">
               Simple Process
             </p>
             <h2 className="font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
@@ -327,7 +327,7 @@ export default function SermonToDevotionalPage() {
                 key={step.number}
                 className="relative rounded-2xl border border-neutral-200 bg-neutral-100/50 p-8"
               >
-                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-500/10 font-display text-lg font-bold text-primary-500">
+                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-500/10 font-display text-lg font-bold text-primary-700">
                   {step.number}
                 </div>
                 <h3 className="mb-3 font-display text-xl font-semibold text-neutral-950">
@@ -350,7 +350,7 @@ export default function SermonToDevotionalPage() {
 
         <div className="relative mx-auto max-w-6xl">
           <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-700">
               Every Devotional Includes
             </p>
             <h2 className="mb-4 font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
@@ -386,7 +386,7 @@ export default function SermonToDevotionalPage() {
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-5 px-8 py-5">
                 <svg
-                  className="mt-0.5 h-4 w-4 shrink-0 text-primary-500"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-primary-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -458,7 +458,7 @@ export default function SermonToDevotionalPage() {
 
         <div className="relative mx-auto max-w-6xl">
           <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-700">
               Pricing
             </p>
             <h2 className="font-display text-4xl font-bold tracking-tight text-neutral-950 sm:text-5xl">
@@ -482,7 +482,7 @@ export default function SermonToDevotionalPage() {
 
             {/* Download */}
             <div className="rounded-2xl border border-primary-500/30 bg-primary-500/5 p-8">
-              <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary-500">
+              <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary-700">
                 Download
               </p>
               <p className="mb-1 font-display text-3xl font-bold text-neutral-950">$2.99</p>
@@ -497,7 +497,7 @@ export default function SermonToDevotionalPage() {
           <div className="mt-10 text-center">
             <a
               href={TOOL_ANCHOR}
-              className="inline-flex items-center gap-2 rounded-xl bg-primary-500 px-8 py-3.5 text-base font-semibold text-neutral-50 shadow-lg transition-all hover:bg-primary-400 hover:shadow-primary-500/20 hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg transition-all hover:bg-primary-600 hover:shadow-primary-500/40 hover:shadow-xl"
             >
               Try it now — free preview, no account needed
               <svg
@@ -576,7 +576,7 @@ export default function SermonToDevotionalPage() {
 
           <a
             href={TOOL_ANCHOR}
-            className="group inline-flex items-center gap-2 rounded-xl bg-primary-500 px-8 py-4 text-lg font-semibold text-neutral-50 shadow-lg transition-all hover:bg-primary-400 hover:shadow-primary-500/20 hover:shadow-xl"
+            className="group inline-flex items-center gap-2 rounded-xl bg-primary-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-primary-600 hover:shadow-primary-500/40 hover:shadow-xl"
           >
             Try Sermon to Devotional
             <svg

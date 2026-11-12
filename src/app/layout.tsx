@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
@@ -33,7 +32,8 @@ export const metadata: Metadata = {
     "app development",
     "Davenson Lombard",
     "Chant d'Espérance",
-    "Ezra Studio",
+    "Ezra",
+    "Jack AI",
   ],
   openGraph: {
     title: "D7 Labs — Independent product studio",
@@ -52,10 +52,6 @@ export default function RootLayout({
     <html lang="en" className={`${spaceGrotesk.variable} ${plusJakarta.variable}`}>
       <body>
         {children}
-        <Script
-          src="https://tally.so/widgets/embed.js"
-          strategy="lazyOnload"
-        />
       </body>
       <GoogleAnalytics gaId="G-FPZ2FD25WV" />
     </html>

@@ -29,7 +29,7 @@ export default function ToolsPage() {
         </div>
 
         <div className="relative mx-auto max-w-6xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-700">
             D7 Labs Tools
           </p>
           <h1 className="mb-4 font-display text-5xl font-bold tracking-tighter text-neutral-950 sm:text-6xl">
@@ -56,7 +56,7 @@ export default function ToolsPage() {
               <div className="relative">
                 {/* Status badge */}
                 <div className="mb-5 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-500/10 px-3 py-1 text-xs font-semibold text-primary-500">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-500/10 px-3 py-1 text-xs font-semibold text-primary-700">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
                     Live
                   </span>
@@ -84,13 +84,13 @@ export default function ToolsPage() {
                 <div className="flex flex-wrap items-center gap-4">
                   <a
                     href="/tools/sermon-to-devotional"
-                    className="text-sm font-medium text-primary-500 transition hover:text-primary-400"
+                    className="text-sm font-medium text-primary-700 transition hover:text-primary-800"
                   >
                     Learn more &rarr;
                   </a>
                   <a
                     href="/tools/sermon-to-devotional"
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50 transition hover:bg-primary-400"
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-primary-600"
                   >
                     Try it free &rarr;
                   </a>
