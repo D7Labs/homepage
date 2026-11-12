@@ -23,9 +23,9 @@ export default async function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#09090B",
+          backgroundColor: "#0E0E0E",
           backgroundImage:
-            "radial-gradient(circle at 25% 30%, rgba(14, 194, 138, 0.20) 0%, transparent 55%), radial-gradient(circle at 80% 75%, rgba(14, 194, 138, 0.10) 0%, transparent 50%)",
+            "radial-gradient(circle at 25% 30%, rgba(59, 59, 214, 0.20) 0%, transparent 55%), radial-gradient(circle at 80% 75%, rgba(59, 59, 214, 0.10) 0%, transparent 50%)",
           padding: "72px 80px",
           fontFamily: "Space Grotesk",
         }}
@@ -37,13 +37,13 @@ export default async function Image() {
               width: 80,
               height: 80,
               borderRadius: 18,
-              backgroundColor: "#0EC28A",
+              backgroundColor: "#3b3bd6",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontSize: 40,
               fontWeight: 700,
-              color: "#09090B",
+              color: "#FFFFFF",
             }}
           >
             D7
@@ -75,7 +75,7 @@ export default async function Image() {
           >
             <div style={{ display: "flex" }}>We build</div>
             <div style={{ display: "flex", gap: "0.28em" }}>
-              <span style={{ color: "#0EC28A" }}>AI-powered</span>
+              <span style={{ color: "#8585f0" }}>AI-powered</span>
               <span>products.</span>
             </div>
           </div>

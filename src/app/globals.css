@@ -1,28 +1,30 @@
 /* ============================================================
    D7 Labs — Landing Page Design System
-   Dark theme only. Tokens inherited from D7 Engine creator-studio.
+   Light theme. Primary brand color: #3b3bd6.
    Fonts: Space Grotesk (display) + Plus Jakarta Sans (body)
    ============================================================ */
 
 @import "tailwindcss";
 
 /* ============================================================
-   CSS Custom Properties — Dark Theme Only
+   CSS Custom Properties — Light Theme
    ============================================================ */
 
 :root {
-  /* --- Primary: D7 Emerald --- */
-  --color-primary-50: #02281c;
-  --color-primary-100: #04412e;
-  --color-primary-200: #065e42;
-  --color-primary-300: #097f5a;
-  --color-primary-400: #0ba172;
-  --color-primary-500: #0ec28a;
-  --color-primary-600: #1fd19d;
-  --color-primary-700: #5de3b7;
-  --color-primary-800: #9ef0d4;
-  --color-primary-900: #d2f9ec;
-  --color-primary-950: #edfdf7;
+  /* --- Primary: D7 Blue ---
+     500 (#3b3bd6) is the brand fill (buttons, logo tile) with white text
+     on top (7.5:1). Text/link accents use 700 (#2626a3) for extra weight. */
+  --color-primary-50: #eeeefd;
+  --color-primary-100: #d6d6fa;
+  --color-primary-200: #adadf5;
+  --color-primary-300: #8585f0;
+  --color-primary-400: #5c5ce6;
+  --color-primary-500: #3b3bd6;
+  --color-primary-600: #3030c0;
+  --color-primary-700: #2626a3;
+  --color-primary-800: #1c1c75;
+  --color-primary-900: #12124a;
+  --color-primary-950: #0b0b2e;
 
   /* --- Secondary: Amber --- */
   --color-secondary-50: #451A03;
@@ -37,18 +39,18 @@
   --color-secondary-900: #FEF3C7;
   --color-secondary-950: #FFFBEB;
 
-  /* --- Neutral: Zinc (dark) --- */
-  --color-neutral-50: #09090B;
-  --color-neutral-100: #18181B;
-  --color-neutral-200: #27272A;
-  --color-neutral-300: #3F3F46;
-  --color-neutral-400: #52525B;
+  /* --- Neutral: Zinc (light) — 50 is the page, 950 is ink --- */
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F4F4F5;
+  --color-neutral-200: #E4E4E7;
+  --color-neutral-300: #D4D4D8;
+  --color-neutral-400: #A1A1AA;
   --color-neutral-500: #71717A;
-  --color-neutral-600: #A1A1AA;
-  --color-neutral-700: #D4D4D8;
-  --color-neutral-800: #E4E4E7;
-  --color-neutral-900: #F4F4F5;
-  --color-neutral-950: #FAFAFA;
+  --color-neutral-600: #52525B;
+  --color-neutral-700: #3F3F46;
+  --color-neutral-800: #27272A;
+  --color-neutral-900: #18181B;
+  --color-neutral-950: #0E0E0E;
 
   /* --- Surface & Text --- */
   --background: var(--color-neutral-50);
@@ -63,20 +65,20 @@
   --outline-secondary: var(--color-neutral-200);
 
   /* --- On-color text + semantic colors (used by embedded sermon tool) --- */
-  --on-primary: var(--color-neutral-50);
-  --on-error: var(--color-neutral-950);
-  --color-success-light: #052E16;
-  --color-success: #4ADE80;
-  --color-success-dark: #BBF7D0;
-  --color-error-light: #450A0A;
-  --color-error: #F87171;
-  --color-error-dark: #FECACA;
+  --on-primary: #ffffff;
+  --on-error: #ffffff;
+  --color-success-light: #F0FDF4;
+  --color-success: #22C55E;
+  --color-success-dark: #166534;
+  --color-error-light: #FEF2F2;
+  --color-error: #EF4444;
+  --color-error-dark: #991B1B;
 
-  /* --- Shadows (dark) --- */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  /* --- Shadows (light) --- */
+  --shadow-sm: 0 1px 2px 0 rgba(14, 14, 14, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(14, 14, 14, 0.07), 0 2px 4px -2px rgba(14, 14, 14, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(14, 14, 14, 0.08), 0 4px 6px -4px rgba(14, 14, 14, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(14, 14, 14, 0.1), 0 8px 10px -6px rgba(14, 14, 14, 0.05);
 
   /* --- Transitions --- */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -196,6 +198,7 @@
   --animate-slide-down: slide-down 0.2s ease-out;
   --animate-scale-in: scale-in 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  --animate-rise: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* ============================================================
@@ -232,6 +235,32 @@
   50% { opacity: 0.8; }
 }
 
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll reveal — progressive enhancement. Browsers with scroll-driven
+   animations fade/rise elements as they enter the viewport; others just
+   show them. No JS. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { animation: none !important; }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }
@@ -243,7 +272,8 @@
 
 html {
   overflow-x: clip;
-  color-scheme: dark;
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -269,14 +299,14 @@ h2 { font-weight: 600; }
 h3, h4, h5, h6 { font-weight: 500; }
 
 :focus-visible {
-  outline: 2px solid #0ec28a;
+  outline: 2px solid #3b3bd6;
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
 
 ::selection {
-  background: #0ba172;
-  color: #edfdf7;
+  background: #3b3bd6;
+  color: #ffffff;
 }
 
 @media (max-width: 640px) {
@@ -286,28 +316,28 @@ h3, h4, h5, h6 { font-weight: 500; }
 }
 
 /* ============================================================
-   Sermon Tool Scope — light-themed island inside the dark site.
+   Sermon Tool Scope — the embedded tool keeps its own light tokens
+   (it predates the site-wide light theme).
    The embedded sermon-to-devotional tool was designed against the
    D7 Engine creator-studio light theme. We scope its tokens here so
-   the tool keeps its original look while the rest of d7labs.dev
-   stays dark.
+   the tool keeps its original look regardless of the site theme.
    ============================================================ */
 
 .sermon-tool-scope {
   color-scheme: light;
 
-  /* Primary: light-mode emerald scale */
-  --color-primary-50: #edfdf7;
-  --color-primary-100: #d2f9ec;
-  --color-primary-200: #9ef0d4;
-  --color-primary-300: #5de3b7;
-  --color-primary-400: #1fd19d;
-  --color-primary-500: #0ec28a;
-  --color-primary-600: #0ba172;
-  --color-primary-700: #097f5a;
-  --color-primary-800: #065e42;
-  --color-primary-900: #04412e;
-  --color-primary-950: #02281c;
+  /* Primary: light-mode blue scale (500 = #3b3bd6, 7.5:1 on white) */
+  --color-primary-50: #eeeefd;
+  --color-primary-100: #d6d6fa;
+  --color-primary-200: #adadf5;
+  --color-primary-300: #8585f0;
+  --color-primary-400: #5c5ce6;
+  --color-primary-500: #3b3bd6;
+  --color-primary-600: #3030c0;
+  --color-primary-700: #2626a3;
+  --color-primary-800: #1c1c75;
+  --color-primary-900: #12124a;
+  --color-primary-950: #0b0b2e;
 
   /* Neutral: light-mode zinc */
   --color-neutral-50: #FAFAFA;
@@ -320,7 +350,7 @@ h3, h4, h5, h6 { font-weight: 500; }
   --color-neutral-700: #3F3F46;
   --color-neutral-800: #27272A;
   --color-neutral-900: #18181B;
-  --color-neutral-950: #09090B;
+  --color-neutral-950: #0E0E0E;
 
   /* Semantic */
   --color-success-light: #F0FDF4;

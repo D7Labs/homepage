@@ -1,10 +1,10 @@
 # Pricing — D7 Labs
 
-Last updated: 2026-05-05
+Last updated: 2026-11-11
 
 ## Sermon to Devotional (live)
 
-- **Status**: Live and available now. First publicly-available capability of Ezra Studio.
+- **Status**: Live and available now.
 - **Price**: $2.99 USD per devotional download
 - **Billing**: One-time, per-document. No subscription, no recurring charges.
 - **What you get**: One 3-day devotional PDF (or Word .docx) generated from your sermon source.
@@ -14,21 +14,30 @@ Last updated: 2026-05-05
 - **Inputs accepted**: YouTube link OR PDF transcript.
 - **URL**: https://d7labs.dev/tools/sermon-to-devotional
 
-## Ezra Studio (flagship — pre-launch)
+## Ezra (live)
 
-- **Status**: Pre-launch, waitlist open
-- **Price**: TBD
-- **What it is**: Full sermon-content suite. One sermon in → searchable library + a week of ministry content out (devotionals, discussion guides, social clips, study plans, more). Built around three layers: Process, Search, and Converse (RAG chat scoped to a sermon, a church library, or the platform).
+- **Status**: Live on iPhone, iPad, and Android.
+- **Price**: Free, with optional Ezra Plus subscription.
+- **Ezra Plus**: $9.99 USD per month, or $99.99 USD per year (App Store US pricing; local prices vary — check in the app).
+- **What it is**: Personal AI learning assistant. Record or import lectures, sermons, YouTube videos, audio, and PDFs; get transcripts, summaries, cited answers, quizzes, flashcards, and study guides.
+- **Languages**: English, French.
 - **URL**: https://ezrastudio.ai
+
+## Jack AI (live)
+
+- **Status**: Live on iPhone and iPad.
+- **Price**: Free
+- **What it is**: Offline, on-device AI assistant — chat, live translation, transcription, and text extraction from photos and PDFs.
+- **URL**: https://jackai.d7labs.dev
 
 ## Chant d'Espérance (live)
 
-- **Status**: Live on iOS and Android. Separate product line — not part of the Ezra Studio suite.
+- **Status**: Live on iOS and Android.
 - **Price**: Free
 - **What it is**: Hymnal and Bible reader app for Haitian and Francophone churches. 9 hymn books, 3 Bible translations, trilingual interface.
 - **URL**: https://cesperance.com
 
-## Comparison to alternatives
+## Sermon to Devotional — comparison to alternatives
 
 D7 Labs is the only sermon-to-devotional tool with **pay-per-document** pricing. Every other AI-powered sermon-content tool requires a monthly subscription:
 

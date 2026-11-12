@@ -1,6 +1,6 @@
 /* ============================================================
    SiteNav — Shared navigation bar
-   Used across all pages. Dark theme only.
+   Used across all pages.
    ============================================================ */
 
 function D7Logo({ size = 28 }: { size?: number }) {
@@ -13,7 +13,7 @@ function D7Logo({ size = 28 }: { size?: number }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-label="D7 Labs logo"
     >
-      <rect width="32" height="32" rx="8" fill="#0ec28a" />
+      <rect width="32" height="32" rx="8" fill="#3b3bd6" />
       <text
         x="16"
         y="22"
@@ -21,7 +21,7 @@ function D7Logo({ size = 28 }: { size?: number }) {
         fontFamily="system-ui, sans-serif"
         fontSize="16"
         fontWeight="700"
-        fill="#09090B"
+        fill="#FFFFFF"
       >
         D7
       </text>
@@ -41,14 +41,20 @@ export default function SiteNav() {
         </a>
         <div className="hidden items-center gap-8 sm:flex">
           <a
-            href="/#products"
-            className="text-sm text-neutral-600 transition hover:text-primary-500"
+            href="/#apps"
+            className="text-sm text-neutral-600 transition hover:text-primary-700"
           >
-            Projects
+            Apps
+          </a>
+          <a
+            href="/#team"
+            className="text-sm text-neutral-600 transition hover:text-primary-700"
+          >
+            Team
           </a>
           <a
             href="/#contact"
-            className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50 transition hover:bg-primary-400"
+            className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-primary-600"
           >
             Get in Touch
           </a>
@@ -56,7 +62,7 @@ export default function SiteNav() {
         {/* Mobile: Get in Touch button */}
         <a
           href="/#contact"
-          className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-neutral-50 sm:hidden"
+          className="rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white sm:hidden"
         >
           Contact
         </a>

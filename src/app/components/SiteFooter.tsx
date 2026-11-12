@@ -1,6 +1,6 @@
 /* ============================================================
    SiteFooter — Shared footer
-   Used across all pages. Dark theme only.
+   Used across all pages.
    ============================================================ */
 
 function D7Logo({ size = 28 }: { size?: number }) {
@@ -13,7 +13,7 @@ function D7Logo({ size = 28 }: { size?: number }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-label="D7 Labs logo"
     >
-      <rect width="32" height="32" rx="8" fill="#0ec28a" />
+      <rect width="32" height="32" rx="8" fill="#3b3bd6" />
       <text
         x="16"
         y="22"
@@ -21,7 +21,7 @@ function D7Logo({ size = 28 }: { size?: number }) {
         fontFamily="system-ui, sans-serif"
         fontSize="16"
         fontWeight="700"
-        fill="#09090B"
+        fill="#FFFFFF"
       >
         D7
       </text>
@@ -38,7 +38,7 @@ export default function SiteFooter() {
           <span className="font-display text-sm font-medium text-neutral-700">D7 Labs</span>
         </div>
         <p className="text-xs text-neutral-500">
-          &copy; {new Date().getFullYear()} D7 Labs. Built with purpose.
+          &copy; {new Date().getFullYear()} Laboratoires D7 Inc. (D7 Labs) · Montreal, Canada
         </p>
       </div>
     </footer>

@@ -23,9 +23,9 @@ export default async function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#09090B",
+          backgroundColor: "#0E0E0E",
           backgroundImage:
-            "radial-gradient(circle at 22% 28%, rgba(14, 194, 138, 0.18) 0%, transparent 55%), radial-gradient(circle at 82% 76%, rgba(14, 194, 138, 0.10) 0%, transparent 50%)",
+            "radial-gradient(circle at 22% 28%, rgba(59, 59, 214, 0.18) 0%, transparent 55%), radial-gradient(circle at 82% 76%, rgba(59, 59, 214, 0.10) 0%, transparent 50%)",
           padding: "64px 76px",
           fontFamily: "Space Grotesk",
         }}
@@ -37,13 +37,13 @@ export default async function Image() {
               width: 64,
               height: 64,
               borderRadius: 14,
-              backgroundColor: "#0EC28A",
+              backgroundColor: "#3b3bd6",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontSize: 32,
               fontWeight: 700,
-              color: "#09090B",
+              color: "#FFFFFF",
             }}
           >
             D7
@@ -74,7 +74,7 @@ export default async function Image() {
             }}
           >
             <div>Sermon to</div>
-            <div style={{ color: "#0EC28A" }}>Devotional.</div>
+            <div style={{ color: "#8585f0" }}>Devotional.</div>
           </div>
           <div
             style={{
